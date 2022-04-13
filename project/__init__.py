@@ -11,7 +11,7 @@ def create_app():
     app.config['SECRET_KEY'] = 'youcantseeme'
     # base_dir = os.path.abspath(os.path.dirname(__file__))
     # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(base_dir, "bankly.sqlite")
-    app.config["SQLALCHEMY_DATABASE_URI"]='postgresql://yzzzbcadqbvydh:16662364b7fc45d89adc6502f918fa109e908da5e41146f162482c1b3dc7ffc7@ec2-34-207-12-160.compute-1.amazonaws.com:5432/d9idqfumrmdpdt'
+    app.config["SQLALCHEMY_DATABASE_URI"]='postgresql://yzzzbcadqbvydh:16662364b7fc45d89adc6502f918fa109e908da5e41146f162482c1b3dc7ffc7@ec2-34-207-12-160.compute-1.amazonaws.com:5433/d9idqfumrmdpdt'
     # app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
     db.init_app(app)

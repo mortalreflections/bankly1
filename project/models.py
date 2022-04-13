@@ -5,9 +5,9 @@ class Users(UserMixin,db.Model):
 	__tablename__="Users"
 	# __table_args__ = {'extend_existing': True}
 	id= db.Column(db.Integer, primary_key=True)
-	Name=db.Column(db.String(50))
-	Email= db.Column(db.String(100))
-	Password= db.Column(db.String(255))
+	Name=db.Column(db.String(200))
+	Email= db.Column(db.String(120))
+	Password= db.Column(db.String(128))
 	admin=db.Column(db.Boolean)
 	# FD = db.relationship("Deposits", backref="user")
 
@@ -16,7 +16,7 @@ class Deposits(UserMixin,db.Model):
 	# __table_args__ = {'extend_existing': True}
 	id = db.Column(db.Integer,primary_key=True)
 	Name = db.Column(db.String(50))
-	Email = db.Column(db.String(100))
+	Email = db.Column(db.String(120))
 	DOB = db.Column(db.Date)
 	Age = db.Column(db.Integer)
 	BankName = db.Column(db.String(50))

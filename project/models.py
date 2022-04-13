@@ -7,7 +7,7 @@ class Users(UserMixin,db.Model):
 	id= db.Column(db.Integer, primary_key=True)
 	Name=db.Column(db.String(50))
 	Email= db.Column(db.String(100))
-	Password= db.Column(db.String(50))
+	Password= db.Column(db.String(100))
 	admin=db.Column(db.Boolean)
 	# FD = db.relationship("Deposits", backref="user")
 

@@ -55,10 +55,9 @@ def signup_post():
     elif not email and not name and not password:
         flash('Email address already exists.')
         return redirect (url_for('auth.signup'))
-        password=generate_password_hash(password, method='sha256', )
 
     else:
-        new_user = Users(Email=email, Name=name, Password=password.decode("utf-8", "ignore"), admin= True)
+        new_user = Users(Email=email, Name=name, Password=generate_password_hash(password, method='sha256', ), admin= True)
         db.session.add(new_user)
         db.session.commit()
         return redirect(url_for('auth.login'))
